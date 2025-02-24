@@ -18,7 +18,7 @@ import lombok.Setter;
 public class Nota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idNota;
+    private Long id;
 
     private Double nota;
     private String observacion;

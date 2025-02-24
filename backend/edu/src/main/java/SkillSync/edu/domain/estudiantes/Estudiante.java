@@ -19,7 +19,7 @@ import lombok.Setter;
 public class Estudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEstudiante;
+    private Long id;
 
     @Column(nullable = false)
     private String nombre;

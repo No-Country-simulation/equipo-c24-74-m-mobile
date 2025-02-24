@@ -18,7 +18,7 @@ import lombok.Setter;
 public class Representante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idRepresentante;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "id_usuario", unique = true, nullable = false)

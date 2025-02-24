@@ -27,11 +27,11 @@ public class ProfesorController {
     public ResponseEntity<DatosRespuestaProfesor> registrarProfesor(@RequestBody @Valid DatosRegistroProfesor datosRegistroMedico,
                                                                     UriComponentsBuilder uriComponentsBuilder) {
         Profesor profesor = profesorRepository.save(new Profesor(datosRegistroMedico));
-        DatosRespuestaProfesor datosRespuestaProfesor = new DatosRespuestaProfesor(profesor.getIdProfesor(), 
+        DatosRespuestaProfesor datosRespuestaProfesor = new DatosRespuestaProfesor(profesor.getId(),
                 profesor.getNombre(), profesor.getApellido(), profesor.getCorreo(), profesor.getTitulo().toString());
 
 
-        URI url = uriComponentsBuilder.path("/profesores/{id}").buildAndExpand(profesor.getIdProfesor()).toUri();
+        URI url = uriComponentsBuilder.path("/profesores/{id}").buildAndExpand(profesor.getId()).toUri();
         DatosRespuestaProfesor datosRespuestaprofesor = null;
         return ResponseEntity.created(url).body(datosRespuestaprofesor);
 

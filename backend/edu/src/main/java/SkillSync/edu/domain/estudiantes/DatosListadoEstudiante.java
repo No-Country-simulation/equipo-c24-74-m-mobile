@@ -6,6 +6,6 @@ import SkillSync.edu.domain.representantes.Representante;
 public record DatosListadoEstudiante(
         Long idEstudiante, String nombre, String apellido, Grado grado, Representante representante) {
     public DatosListadoEstudiante(Estudiante estudiante) {
-        this(estudiante.getIdEstudiante(), estudiante.getNombre(), estudiante.getApellido(), estudiante.getGrado(), estudiante.getRepresentante());
+        this(estudiante.getId(), estudiante.getNombre(), estudiante.getApellido(), estudiante.getGrado(), estudiante.getRepresentante());
     }
 }

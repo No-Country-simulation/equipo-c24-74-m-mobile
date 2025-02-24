@@ -1,10 +1,13 @@
 package SkillSync.edu.domain.profesores;
 
 
+import SkillSync.edu.domain.materias.Materia;
 import SkillSync.edu.domain.usuarios.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+
+import java.util.List;
 
 @Entity(name = "profesor")
 @Table(name = "profesores")
@@ -16,7 +19,7 @@ import lombok.*;
 public class Profesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idProfesor;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "id_usuario", unique = true, nullable = false)
@@ -29,6 +32,13 @@ public class Profesor {
     private String correo;
     @Enumerated(EnumType.STRING)
     private Titulo titulo;
+    @ManyToMany
+    @JoinTable(
+            name = "profesores_materias",
+            joinColumns = @JoinColumn(name = "profesor_id"),
+            inverseJoinColumns = @JoinColumn(name = "materia_id")
+    )
+    private List<Materia> materiasList;
 
     public Profesor(DatosRegistroProfesor datosRegistroProfesor) {
 
