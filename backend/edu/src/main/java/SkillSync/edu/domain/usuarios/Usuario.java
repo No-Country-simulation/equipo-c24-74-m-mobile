@@ -32,7 +32,7 @@ public class Usuario {
     private String contraseña;
 
     @Column(nullable = false)
-    private String rol;//"PROFESOR" o "REPRESENTANTE"    private String correoElectronico;
+    private Rol rol;//"PROFESOR" o "REPRESENTANTE"    private String correoElectronico;
 
 
 

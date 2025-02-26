@@ -1,4 +1,4 @@
 package SkillSync.edu.domain.usuarios;
 
-public record DatosAutenticacionUsuario() {
+public record DatosAutenticacionUsuario(String correo, String contraseña) {
 }
