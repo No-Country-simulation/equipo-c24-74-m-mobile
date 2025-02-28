@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import ResetPassword from '../components/forgotPasword/ResetPassword'
-import Modal from '../components/forgotPasword/Modal'
+import ResetPassword from '../components/forgotPassword/ResetPassword'
+import Modal from '../components/forgotPassword/Modal'
 
 const ForgotPasswordPage = () => {
 const [isModalVisible, setModalVisible] = useState(false)

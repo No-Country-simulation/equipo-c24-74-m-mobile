@@ -1,6 +1,6 @@
-import Login from '../components/login/FormLogin'
-import MensajeLogin from '../components/login/MensajeLogin'
-import logoAcademia from '.../assets/images/logo_skillsyncedu.jpeg'
+import Login from '../components/Login/FormLogin'
+import MensajeLogin from '../components/Login/MensajeLogin'
+import logoAcademia from '../assets/images/logo_skillsyncedu.jpeg'
 
 const LoginPage = () => {
 return (

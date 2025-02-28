@@ -57,7 +57,7 @@ export default {
 				},
 			},
 
-			screens: {  
+			screens: {
 				mobile: {'max':"22.5rem"},
 				tablet: "46.5rem",
 				desktop: "90rem",
