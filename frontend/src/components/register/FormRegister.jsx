@@ -70,7 +70,7 @@ export const FormRegister = () => {
           Te damos la Bienvenida!
         </h2>
         <p className="text-center mb-6">
-          Regístrate e inicia tu transformación laboral
+          Regístrate y empieza a mejorar tu relación comunidad-escuela
         </p>
 
         <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4">
