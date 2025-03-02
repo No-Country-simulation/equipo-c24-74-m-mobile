@@ -27,14 +27,12 @@ public class Materia {
 
     private String descripcion;
 
-    @ManyToMany(mappedBy = "materiasList")
-    private List<Profesor> profesoresList;
+    @ManyToOne
+    @JoinColumn(name = "grado_id", nullable = false)
+    private Grado grado;
 
-    @ManyToMany
-    @JoinTable(
-            name = "materias_grados",
-            joinColumns = @JoinColumn(name = "idMateria"),
-            inverseJoinColumns = @JoinColumn(name = "idGrado")
-    )
-    private List<Grado> gradosList;
+    @ManyToOne
+    @JoinColumn(name = "id_profesor", nullable= false)
+    private Profesor profesor;
+
 }

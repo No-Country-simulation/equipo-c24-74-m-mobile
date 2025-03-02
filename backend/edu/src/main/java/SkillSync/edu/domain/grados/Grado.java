@@ -26,6 +26,6 @@ public class Grado {
 
     private String seccion;
 
-    @ManyToMany(mappedBy = "gradosList")
+    @OneToMany(mappedBy = "grado", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Materia> materiasList;
 }
