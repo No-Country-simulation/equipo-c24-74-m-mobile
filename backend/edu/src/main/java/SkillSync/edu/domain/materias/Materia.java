@@ -27,7 +27,7 @@ public class Materia {
 
     private String descripcion;
 
-    @ManyToMany(mappedBy = "materiasList")
+    @ManyToMany(mappedBy = "materias")
     private List<Profesor> profesoresList;
 
     @ManyToMany
@@ -37,4 +37,7 @@ public class Materia {
             inverseJoinColumns = @JoinColumn(name = "idGrado")
     )
     private List<Grado> gradosList;
+
+    public void setProfesor(Profesor profesor) {
+    }
 }

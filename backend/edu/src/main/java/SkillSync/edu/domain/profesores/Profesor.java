@@ -38,7 +38,7 @@ public class Profesor {
             joinColumns = @JoinColumn(name = "profesor_id"),
             inverseJoinColumns = @JoinColumn(name = "materia_id")
     )
-    private List<Materia> materiasList;
+    private List<Materia> materias;
 
     public Profesor(DatosRegistroProfesor datosRegistroProfesor) {
 

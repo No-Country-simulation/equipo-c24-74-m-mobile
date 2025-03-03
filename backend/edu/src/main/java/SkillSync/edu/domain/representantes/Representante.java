@@ -1,6 +1,7 @@
 package SkillSync.edu.domain.representantes;
 
 
+import SkillSync.edu.domain.estudiantes.Estudiante;
 import SkillSync.edu.domain.profesores.DatosRegistroProfesor;
 import SkillSync.edu.domain.usuarios.Usuario;
 import jakarta.persistence.*;
@@ -8,6 +9,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity(name = "Representante")
 @Table(name = "representantes")
@@ -50,5 +53,10 @@ public class Representante {
         if (datos.telefono() != null) {
             this.telefono = datos.telefono();
         }
+    }
+
+    public List<Estudiante> getEstudiantes() {
+
+        return List.of();
     }
 }
