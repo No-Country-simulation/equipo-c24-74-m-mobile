@@ -11,7 +11,7 @@ const ToggleSwitch = ({ enabled, onChange }) => {
                     relative inline-flex items-center
                     h-3 rounded-full w-6 cursor-pointer
                     transition-colors duration-300
-                    ${enabled ? 'border-primary-500' : 'border-gray-300'}`
+                    ${enabled ? 'border-primary-500' : 'border-gray-600'}`
                 }
                 style={{
                     borderWidth: '2px',
