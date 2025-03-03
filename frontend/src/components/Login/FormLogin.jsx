@@ -156,10 +156,10 @@ const Login = () => {
                 <p className='text-center text-sm'>
                     ¿No tienes una cuenta?{' '}
                     <span
-                        onClick={goToSignUp}
-                        className='font-medium font-workSans cursor-pointer text-primary-900'
+                    onClick={goToSignUp}
+                    className='font-medium font-workSans cursor-pointer text-black-900 hover:bg-indigo-900 hover:text-white px-2 py-1 rounded'
                     >
-                        Regístrate
+                    Regístrate
                     </span>
                 </p>
             </div>
