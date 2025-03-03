@@ -29,17 +29,6 @@ CREATE TABLE Representantes (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id)
 );
 
-CREATE TABLE Materias (
-    id BIGINT NOT NULL  AUTO_INCREMENT,
-    nombre VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-     id_profesor BIGINT NOT NULL,
-
-    FOREIGN KEY (id_profesor) REFERENCES Profesores(id),
-
-    PRIMARY KEY (id)
-);
-
 CREATE TABLE Grados (
     id BIGINT NOT NULL  AUTO_INCREMENT,
     nombre VARCHAR(255) NOT NULL,
@@ -47,6 +36,20 @@ CREATE TABLE Grados (
 
     PRIMARY KEY (id)
 );
+
+CREATE TABLE Materias (
+    id BIGINT NOT NULL  AUTO_INCREMENT,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    id_grado BIGINT NOT NULL,
+    id_profesor BIGINT NOT NULL,
+
+    FOREIGN KEY (id_profesor) REFERENCES Profesores(id),
+    FOREIGN KEY (id_grado) REFERENCES Grados(id),
+
+    PRIMARY KEY (id)
+);
+
 
 CREATE TABLE Estudiantes (
     id BIGINT NOT NULL  AUTO_INCREMENT,

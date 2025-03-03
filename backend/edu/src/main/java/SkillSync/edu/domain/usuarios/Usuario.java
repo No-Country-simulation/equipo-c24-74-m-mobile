@@ -32,6 +32,7 @@ public class Usuario {
     private String contraseña;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Rol rol;//"PROFESOR" o "REPRESENTANTE"    private String correoElectronico;
 
 
