@@ -1,37 +1,12 @@
-# equipo-c24-74-m-webapp
+# React + Vite
 
-Instrucciones para iniciar el proyecto:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. Clonar o forkear el repositorio:
+Currently, two official plugins are available:
 
-```bash
-git clone https://github.com/No-Country-simulation/equipo-c24-74-m-mobile/
-cd frontend
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. Instalar las dependencias
+## Expanding the ESLint configuration
 
-```bash
-npm install
-```
-
-3. Ejecución ▶️
-
-```bash
-npm run dev
-```
-
-# Herramientas a utilizar en FE:
-- JS
-- Vite 5.4.0
-- React 18.3.1
-- React-dom 18.3.1
-- React-hook-form: 7.53.0
-- React-router-dom: 6.26.0
-- React-chartjs-2: 5.2.0
-- React-icons: 5.3.0
-- Node 20.13.1
-- Tailwind 3.4.10
-- Axios: 1.7.5
-- Chart.js: 4.4.4
-- Chartjs-plugin-datalabels: 2.2.0
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

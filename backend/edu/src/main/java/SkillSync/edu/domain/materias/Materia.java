@@ -27,6 +27,7 @@ public class Materia {
 
     private String descripcion;
 
+<<<<<<< HEAD
     @ManyToMany(mappedBy = "materias")
     private List<Profesor> profesoresList;
 
@@ -40,4 +41,14 @@ public class Materia {
 
     public void setProfesor(Profesor profesor) {
     }
+=======
+    @ManyToOne
+    @JoinColumn(name = "grado_id", nullable = false)
+    private Grado grado;
+
+    @ManyToOne
+    @JoinColumn(name = "id_profesor", nullable= false)
+    private Profesor profesor;
+
+>>>>>>> 1ca8beae19e2d8e85fd6cbed0a05a31bf24ed980
 }

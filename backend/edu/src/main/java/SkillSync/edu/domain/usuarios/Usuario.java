@@ -34,7 +34,11 @@ public class Usuario implements UserDetails {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
+<<<<<<< HEAD
     private Rol rol;//"PROFESOR" o "REPRESENTANTE"
+=======
+    private Rol rol;//"PROFESOR" o "REPRESENTANTE"    private String correoElectronico;
+>>>>>>> 1ca8beae19e2d8e85fd6cbed0a05a31bf24ed980
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
