@@ -51,4 +51,9 @@ public class Representante {
             this.telefono = datos.telefono();
         }
     }
+
+    public Long obteerId(){
+        Long miId = this.getId();
+        return miId;
+    }
 }
