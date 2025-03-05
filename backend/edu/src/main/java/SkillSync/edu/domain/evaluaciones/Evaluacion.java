@@ -1,8 +1,10 @@
 package SkillSync.edu.domain.evaluaciones;
 
 
+import SkillSync.edu.domain.estudiantes.Estudiante;
 import SkillSync.edu.domain.grados.Grado;
 import SkillSync.edu.domain.materias.Materia;
+import SkillSync.edu.domain.profesores.Profesor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +24,6 @@ public class Evaluacion {
 
     @Column(nullable = false)
     private String nombre;
-
     private String fecha;
     private String hora;
     private String tema;
@@ -37,4 +38,9 @@ public class Evaluacion {
     @ManyToOne
     @JoinColumn(name = "id_grado", nullable = false)
     private Grado grado;
+
+
+    public void setProfesor(Profesor profesor) {
+    }
+
 }
