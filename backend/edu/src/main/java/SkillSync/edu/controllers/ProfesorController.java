@@ -26,6 +26,7 @@ public class ProfesorController {
     private EvaluacionRepository evaluacionRepository;
 
     // Agregar materia
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{profesorId}/materias")
     public ResponseEntity<Materia> agregarMateria(@PathVariable Long profesorId, @RequestBody Materia materia) {
         Materia nuevaMateria = profesorService.agregarMateria(profesorId, materia);
@@ -33,6 +34,7 @@ public class ProfesorController {
     }
 
     // Gestionar evaluaciones
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{profesorId}/evaluaciones")
     public ResponseEntity<Evaluacion> crearEvaluacion(@PathVariable Long profesorId, @RequestBody Evaluacion evaluacion) {
         // Buscar el profesor en la base de datos
@@ -45,6 +47,7 @@ public class ProfesorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevaEvaluacion);
     }
     // Enviar mensaje a representante
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/mensajes")
     public ResponseEntity<Mensaje> enviarMensaje(@RequestBody Mensaje mensaje) {
         Mensaje nuevoMensaje = profesorService.enviarMensaje(mensaje);
@@ -52,6 +55,7 @@ public class ProfesorController {
     }
 
     // Obtener un profesor por ID
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{profesorId}")
     public ResponseEntity<Profesor> obtenerProfesorPorId(@PathVariable Long profesorId) {
         Optional<Profesor> profesor = profesorService.obtenerPorId(profesorId);

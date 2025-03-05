@@ -3,10 +3,7 @@ package SkillSync.edu.controllers;
 
 import SkillSync.edu.domain.usuarios.AuthService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -21,6 +18,7 @@ public class AutenticacionController {
         this.authService = authService;
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         boolean isAuthenticated = authService.authenticate(credentials.get("correo"), credentials.get("contraseña"));

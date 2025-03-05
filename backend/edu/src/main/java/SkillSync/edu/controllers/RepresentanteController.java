@@ -6,10 +6,7 @@ import SkillSync.edu.domain.estudiantes.EstudianteRepository;
 import SkillSync.edu.domain.representantes.Representante;
 import SkillSync.edu.domain.representantes.RepresentanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,9 +20,10 @@ public class RepresentanteController {
     @Autowired
     EstudianteRepository estudianteRepository;
 
-    
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/representado/{id}")
-    public List<Estudiante> mostrarRepresentado(@PathVariable Long id){
+    public void mostrarRepresentado(@PathVariable Long id){
         Optional<Representante> representanteOptional = representanteRepository.findById(id);
 
         if(representanteOptional.isEmpty()){
