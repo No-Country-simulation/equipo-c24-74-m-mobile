@@ -8,13 +8,13 @@ const Navbar = () => {
         <nav>
           <ul>
             <li className="mb-4">
-              <a href="/" className="flex items-center text-gray-700 hover:text-blue-700">
+              <a href="/dashboard" className="flex items-center text-gray-700 hover:text-blue-700">
                 <i className="fas fa-home mr-3"></i>
                 Home
               </a>
             </li>
             <li className="mb-4">
-              <a href="resports" className="flex items-center text-gray-700 hover:text-blue-500">
+              <a href="/downloaded-reports" className="flex items-center text-gray-700 hover:text-blue-500">
                 <i className="fas fa-clipboard mr-3"></i>
                 Reportes
               </a>
