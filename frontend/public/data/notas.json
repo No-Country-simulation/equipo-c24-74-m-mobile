@@ -1,0 +1,28 @@
+[
+    {
+      "materia": "Matemáticas",
+      "evaluaciones": [8, 9, 7, 10],
+      "nota_final": 8.5
+    },
+    {
+      "materia": "Historia",
+      "evaluaciones": [9, 8, 10, 9],
+      "nota_final": 9
+    },
+    {
+      "materia": "Ciencias",
+      "evaluaciones": [7, 6, 8, 7],
+      "nota_final": 7
+    },
+    {
+      "materia": "Inglés",
+      "evaluaciones": [8, 9, 7, 8],
+      "nota_final": 8
+    },
+    {
+      "materia": "Deportes",
+      "evaluaciones": [6, 7, 5, 6],
+      "nota_final": 6
+    }
+  ]
+  
