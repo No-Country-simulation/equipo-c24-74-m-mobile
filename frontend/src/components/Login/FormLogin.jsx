@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import ToggleSwitch from './ToggleSwitch.jsx'
 import { ContextApp } from '../../context/ContextApp.jsx'
-import  Navbar    from '../NavbarLeft/NavbarLeft.jsx'
+
 
 const Login = () => {
     const { setUser } = useContext(ContextApp)
@@ -101,7 +101,7 @@ const Login = () => {
     return (
         
         <div className='w-[287px] h-[567px] flex flex-col gap-4 p-4 items-center'>
-        <Navbar />
+        
 
             <h1 className='text-center text-xl font-workSans font-semibold italic'>
                 Te damos la bienvenida!
