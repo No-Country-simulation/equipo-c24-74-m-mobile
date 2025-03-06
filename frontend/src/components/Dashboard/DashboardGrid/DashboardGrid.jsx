@@ -15,10 +15,10 @@ const DashboardGrid = () => {
                     onClick={() => navigate("/downloaded-reports")}
                     className="cursor-pointer hover:bg-indigo-500 hover:text-white transition-all duration-300 rounded-lg p-4"
                 >
-                    <StatCard icon="👁" label="DESCARGADOS CON ÉXITO" value="8 Reportes" />
+                    <StatCard icon="👁" label="REPORTES DE EVALUACIONES" value="5 Reportes" />
                 </div>
-                <StatCard icon="📊" label="REVISADOS RECIENTEMENTE" value="6 Vistas" />
-                <StatCard icon="📝" label="ESPACIO PARA OTRO CAMPO" value="2 Conceptos" />
+                <StatCard icon="📊" label="PROXIMAS EVALUACIONES" value="6 PENDIENTES" />
+                <StatCard icon="📝" label="NOTIFICACIONES" value="2 Mensajes" />
             </div>
 
             {/* Contenido principal */}
