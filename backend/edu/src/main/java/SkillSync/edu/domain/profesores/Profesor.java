@@ -32,7 +32,7 @@ public class Profesor {
     private String correo;
     @Enumerated(EnumType.STRING)
     private Titulo titulo;
-<<<<<<< HEAD
+
     @ManyToMany
     @JoinTable(
             name = "profesores_materias",
@@ -40,10 +40,10 @@ public class Profesor {
             inverseJoinColumns = @JoinColumn(name = "materia_id")
     )
     private List<Materia> materias;
-=======
+
     @OneToMany(mappedBy = "profesor", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Materia> materiasList;
->>>>>>> 1ca8beae19e2d8e85fd6cbed0a05a31bf24ed980
+
 
     public Profesor(DatosRegistroProfesor datosRegistroProfesor) {
 
