@@ -9,7 +9,6 @@ const DashboardGrid = () => {
         <div className="p-4">
             <MainCard />
 
-            {/* Estadísticas */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                 <div
                     onClick={() => navigate("/downloaded-reports")}

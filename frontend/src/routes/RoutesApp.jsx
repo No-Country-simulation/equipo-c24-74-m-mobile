@@ -4,6 +4,7 @@ import SignupPage from '../pages/SignupPage.jsx'
 import ForgotPasswordPage from '../pages/ForgotPasswordPage.jsx'
 import DashboardPage from '../pages/DashboardPage.jsx'
 import DownloadedReportsPage from '../pages/DownloadedReportsPage.jsx';
+import TeacherDashboardPage from '../pages/TeacherDashboardPage.jsx'
 
 
 const RoutesApp = () => {
@@ -15,6 +16,7 @@ return (
     <Route path='/forgot-password' element={<ForgotPasswordPage />} />
     <Route path='/dashboard' element={<DashboardPage />} />
     <Route path="/downloaded-reports" element={<DownloadedReportsPage />} />
+    <Route path="/teacher-dashboard" element={<TeacherDashboardPage />} />
     </Routes>
 )
 }
