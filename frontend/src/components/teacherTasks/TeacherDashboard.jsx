@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import EvaluationModal from "../teacherDashboard/EvaluationModal";
+import EvaluationModal from '../teacherTasks/EvaluationModal.jsx';
 
 const subjects = [
   "Matemáticas", "Física", "Química", "Lengua", "Ciencias sociales",
