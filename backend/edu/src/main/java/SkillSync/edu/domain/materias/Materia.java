@@ -28,26 +28,28 @@ public class Materia {
     private String descripcion;
 
 
-    @ManyToMany(mappedBy = "materias")
-    private List<Profesor> profesoresList;
+//    @ManyToMany(mappedBy = "materias")
+//    private List<Profesor> profesoresList;
 
-    @ManyToMany
-    @JoinTable(
-            name = "materias_grados",
-            joinColumns = @JoinColumn(name = "idMateria"),
-            inverseJoinColumns = @JoinColumn(name = "idGrado")
-    )
-    private List<Grado> gradosList;
+//    @ManyToMany
+//    @JoinTable(
+//            name = "materias_grados",
+//            joinColumns = @JoinColumn(name = "idMateria"),
+//            inverseJoinColumns = @JoinColumn(name = "idGrado")
+//    )
+//    private List<Grado> gradosList;
 
-    public void setProfesor(Profesor profesor) {
-    }
 
     @ManyToOne
-    @JoinColumn(name = "grado_id", nullable = false)
+    @JoinColumn(name = "id_grado", nullable = false)
     private Grado grado;
 
     @ManyToOne
     @JoinColumn(name = "id_profesor", nullable= false)
     private Profesor profesor;
 
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
 }
