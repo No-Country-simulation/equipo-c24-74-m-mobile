@@ -1,7 +1,9 @@
 package SkillSync.edu.controllers;
 
+import SkillSync.edu.domain.materias.DatosRespuestanuevaMateria;
 import SkillSync.edu.domain.evaluaciones.Evaluacion;
 import SkillSync.edu.domain.evaluaciones.EvaluacionRepository;
+import SkillSync.edu.domain.materias.DatosRespuestanuevaMateria;
 import SkillSync.edu.domain.materias.Materia;
 import SkillSync.edu.domain.mensajes.Mensaje;
 import SkillSync.edu.domain.profesores.*;
@@ -25,27 +27,41 @@ public class ProfesorController {
     @Autowired
     private EvaluacionRepository evaluacionRepository;
 
-    // Agregar materia
+
+    // Agregar una materia a un profesor
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/{profesorId}/materias")
-    public ResponseEntity<Materia> agregarMateria(@PathVariable Long profesorId, @RequestBody Materia materia) {
+    public ResponseEntity<DatosRespuestanuevaMateria> agregarMateria(@PathVariable Long profesorId, @RequestBody Materia materia) {
+        // Pasamos solo el ID del profesor y la Materia al servicio
+        //System.out.println(profesorId);
         Materia nuevaMateria = profesorService.agregarMateria(profesorId, materia);
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaMateria);
+        DatosRespuestanuevaMateria datosRespuestanuevaMateria = new DatosRespuestanuevaMateria(nuevaMateria.getNombre(), nuevaMateria.getDescripcion());
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(datosRespuestanuevaMateria);
     }
 
-    // Gestionar evaluaciones
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PostMapping("/{profesorId}/evaluaciones")
-    public ResponseEntity<Evaluacion> crearEvaluacion(@PathVariable Long profesorId, @RequestBody Evaluacion evaluacion) {
-        // Buscar el profesor en la base de datos
-        Optional<Profesor> profesorOpt = profesorService.obtenerPorId(profesorId);
+//    @CrossOrigin(origins = "*", allowedHeaders = "*")
+//    @PostMapping("/{profesorId}/materias")
+//    public ResponseEntity<Materia> agregarMateria(@PathVariable Long profesorId, @RequestBody Materia materia) {
+//        Materia nuevaMateria = profesorService.agregarMateria(profesorId, materia);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaMateria);
+//    }
 
-        if (profesorOpt.isEmpty()) {
-            return ResponseEntity.notFound().build();  // Retorna 404 si no encuentra el profesor
-        }
-        Evaluacion nuevaEvaluacion = profesorService.crearEvaluacion(profesorId, evaluacion);
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaEvaluacion);
-    }
+//    // Gestionar evaluaciones
+//    @CrossOrigin(origins = "*", allowedHeaders = "*")
+//    @PostMapping("/{profesorId}/evaluaciones")
+//    public ResponseEntity<Evaluacion> crearEvaluacion(@PathVariable Long profesorId, @RequestBody Evaluacion evaluacion) {
+//        // Buscar el profesor en la base de datos
+//        Optional<Profesor> profesorOpt = profesorService.obtenerPorId(profesorId);
+//
+//        if (profesorOpt.isEmpty()) {
+//            return ResponseEntity.notFound().build();  // Retorna 404 si no encuentra el profesor
+//        }
+//        Evaluacion nuevaEvaluacion = profesorService.crearEvaluacion(profesorId, evaluacion);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaEvaluacion);
+//    }
+
+
     // Enviar mensaje a representante
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/mensajes")
