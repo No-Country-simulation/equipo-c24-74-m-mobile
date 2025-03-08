@@ -1,5 +1,5 @@
 import { useState } from "react";
-import EvaluationList from '../components/teacherDashboard/EvaluationList.jsx';
+import EvaluationList from '../components/teacherTasks/EvaluationList';
 
 const EvaluationListPage = () => {
   const [evaluations, setEvaluations] = useState([]);
