@@ -6,9 +6,6 @@ import java.time.LocalTime;
 public record DatosAgregarEvaluacion(
          String nombre,
          LocalDate fecha,
-         LocalTime hora,
-         String tema,
-         String observaciones,
          String nombreMateria) {
 
 }

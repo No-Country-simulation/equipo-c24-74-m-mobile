@@ -2,6 +2,7 @@ package SkillSync.edu.controllers;
 
 
 import SkillSync.edu.domain.usuarios.AuthService;
+import SkillSync.edu.domain.usuarios.Rol;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,12 +22,13 @@ public class AutenticacionController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
-        boolean isAuthenticated = authService.authenticate(credentials.get("correo"), credentials.get("contraseña"));
+        Rol rol = authService.authenticateAndGetRole(credentials.get("email"), credentials.get("password"));
 
-        if (isAuthenticated) {
-            return ResponseEntity.ok(Map.of("message", "Inicio de sesión exitoso"));
+        if (rol != null) {
+            return ResponseEntity.ok(Map.of("rol", rol)); // Devuelve el rol en caso de éxito
         } else {
-            return ResponseEntity.status(401).body(Map.of("error", "Credenciales incorrectas"));
+            return ResponseEntity.status(401).body(Map.of("error", "Credenciales incorrectas")); // Error si las credenciales fallan
+
         }
     }
 }

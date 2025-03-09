@@ -25,19 +25,20 @@ public class Evaluacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column(nullable = false)
     private String nombre;
     private LocalDate fecha;
-    private LocalTime hora;
-    private String tema;
-    private String observaciones;
+//    private LocalTime hora;
+//    private String tema;
+//    private String observaciones;
 
     @ManyToOne
     @JoinColumn(name = "id_materia", nullable = false)
     private Materia materia;
 
-    @Column(name = "tipo_evaluacion")
-    private String tipoEvaluacion;
+//    @Column(name = "tipo_evaluacion")
+//    private String tipoEvaluacion;
 
 //    @ManyToOne
 //    @JoinColumn(name = "id_grado", nullable = false)

@@ -22,12 +22,16 @@ public class AuthService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public boolean authenticate(String correo, String contraseña) {
+    public Rol authenticateAndGetRole(String correo, String contraseña) {
         Optional<Usuario> userOptional = usuarioRepository.findByCorreo(correo);
         if (userOptional.isPresent()) {
             Usuario usuario = userOptional.get();
-            return passwordEncoder.matches(contraseña, usuario.getContraseña());
+            if (passwordEncoder.matches(contraseña, usuario.getContraseña())) {
+                return usuario.getRol(); // Devuelve el enum correspondiente
+            }
         }
-        return false;
+
+        return null; // Si las credenciales no coinciden
     }
+
 }

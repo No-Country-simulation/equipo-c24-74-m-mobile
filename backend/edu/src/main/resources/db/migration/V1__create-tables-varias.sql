@@ -68,12 +68,7 @@ CREATE TABLE estudiantes (
 CREATE TABLE evaluaciones (
     id BIGINT NOT NULL  AUTO_INCREMENT,
     nombre VARCHAR(255) NOT NULL,
-    fecha DATE,
-    hora TIME,
-    tema VARCHAR(255),
-    observaciones TEXT,
     id_materia BIGINT NOT NULL,
-    tipo_evaluacion VARCHAR(50), -- (examen, taller, proyecto, etc.)
 --    id_grado BIGINT NOT NULL,
 
     FOREIGN KEY (id_materia) REFERENCES materias(id),

@@ -7,7 +7,7 @@ import { ContextApp } from '../../context/ContextApp.jsx'
 
 const Login = () => {
     const { setUser } = useContext(ContextApp)
-    const ENDPOINT = import.meta.env.VITE_API_URL
+    const ENDPOINT = "http://localhost:8080/skillsyncedu"
 
     const {
         register,

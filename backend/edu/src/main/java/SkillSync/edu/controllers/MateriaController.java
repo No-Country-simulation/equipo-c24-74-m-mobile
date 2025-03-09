@@ -25,9 +25,7 @@ public class MateriaController {
 
         Evaluacion nuevaEvaluacion = materiaService.agregarEvaluacion(idMateria, evaluacion);
 
-        DatosAgregarEvaluacion datosAgregarEvaluacion= new DatosAgregarEvaluacion(nuevaEvaluacion.getNombre(), nuevaEvaluacion.getFecha(),
-                                                                                    nuevaEvaluacion.getHora(), nuevaEvaluacion.getTema(),
-                                                                                    nuevaEvaluacion.getObservaciones(), nuevaEvaluacion.getMateria().getNombre());
+        DatosAgregarEvaluacion datosAgregarEvaluacion= new DatosAgregarEvaluacion(nuevaEvaluacion.getNombre(), nuevaEvaluacion.getFecha(), nuevaEvaluacion.getMateria().getNombre());
         return ResponseEntity.status(HttpStatus.CREATED).body(datosAgregarEvaluacion);
     }
 }
