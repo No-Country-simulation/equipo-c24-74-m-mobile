@@ -1,13 +1,14 @@
 import { useEffect, useCallback, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 import ToggleSwitch from './ToggleSwitch.jsx'
 import { ContextApp } from '../../context/ContextApp.jsx'
 
 
 const Login = () => {
     const { setUser } = useContext(ContextApp)
-    const ENDPOINT = import.meta.env.VITE_API_URL
+    const ENDPOINT = import.meta.env.VITE_JAVA_API_URL
 
     const {
         register,
@@ -62,7 +63,7 @@ const Login = () => {
         }
 
         try {
-            const response = await fetch(`${ENDPOINT}/login`, {
+            const response = await axios.post(`${ENDPOINT}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
