@@ -1,0 +1,15 @@
+[
+    { "id": 1, "name": "Juan Pérez", "grade": null },
+    { "id": 2, "name": "María González", "grade": null },
+    { "id": 3, "name": "Carlos Rodríguez", "grade": null },
+    { "id": 4, "name": "Ana López", "grade": null },
+    { "id": 5, "name": "Pedro Fernández", "grade": null },
+    { "id": 6, "name": "Laura Martínez", "grade": null },
+    { "id": 7, "name": "Luis García", "grade": null },
+    { "id": 8, "name": "Sofía Torres", "grade": null },
+    { "id": 9, "name": "Miguel Ramírez", "grade": null },
+    { "id": 10, "name": "Valentina Sánchez", "grade": null },
+    { "id": 11, "name": "Diego Rojas", "grade": null },
+    { "id": 12, "name": "Camila Ortiz", "grade": null },
+    { "id": 13, "name": "Javier Navarro", "grade": null }
+]

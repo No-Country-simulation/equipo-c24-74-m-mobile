@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import ArrowBackButton from "../_common/ArrowBackButton";
+import axios from "axios";
 
 export const FormRegister = () => {
   const {
@@ -8,7 +9,7 @@ export const FormRegister = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const ENDPOINT = import.meta.env.VITE_API_URL;
+  const ENDPOINT = import.meta.env.VITE_JAVA_API_URL;
 
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ export const FormRegister = () => {
     }
 
     try {
-      const response = await fetch(`${ENDPOINT}/usuario/newUsuario`, {
+      const response = await axios.post(`${ENDPOINT}/usuario/newUsuario`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
