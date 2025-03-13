@@ -1,6 +1,7 @@
 import SearchBar from '../components/Dashboard/SearchBar/SearchBar';
 import DashboardGrid from '../components/Dashboard/DashboardGrid/DashboardGrid';
 import Navbar from '../components/NavbarLeft/NavbarLeft';
+import FloatingButton from '../components/FloatingButton/FloatingButton';
 
 const DashboardPage = () => {
     return (
@@ -14,6 +15,12 @@ const DashboardPage = () => {
             <div className="flex-1 p-4">
                 <SearchBar />
                 <DashboardGrid />
+                <FloatingButton
+                    url="/teacher-dashboard"
+                    position="bottom-4 right-4"
+                    label="M"
+                    tooltip="Maestros"
+                />
             </div>
         </div>
     );
