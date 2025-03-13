@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CreateEvaluation from '../components/teacherTasks/CreateEvaluation.jsx';
+import FloatingButton from "../components/FloatingButton/FloatingButton.jsx";
 
 const CreateEvaluationPage = () => {
   const [evaluations, setEvaluations] = useState([]);
@@ -25,6 +26,12 @@ const CreateEvaluationPage = () => {
           )}
         </ul>
       </div>
+      <FloatingButton
+                    url="/dashboard"
+                    position="bottom-4 right-4"
+                    label="H"
+                    tooltip="Home"
+                />
     </div>
   );
 };
