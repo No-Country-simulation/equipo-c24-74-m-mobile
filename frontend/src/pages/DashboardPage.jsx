@@ -8,7 +8,7 @@ const DashboardPage = () => {
         <div className="bg-blue-100 min-h-screen flex">
            
             <div className="w-1/6 bg-white">
-                <Navbar />
+                <Navbar userName= "Juan Perez"/>
             </div>
 
           
